@@ -14,12 +14,12 @@ $("#searchButton").click(function() {
       method: 'GET',
     }).done(function(result) {
       console.log(result);
+
+      document.getElementById("articleSection").innerHTML = result.response.docs["0"].web_url;
+
     }).fail(function(err) {
       throw err;
     });
     
-    //url.q = "Atlanta";
-    //console.log(document.getElementById("search-term").value
-
 })
 
